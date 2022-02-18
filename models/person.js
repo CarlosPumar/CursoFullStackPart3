@@ -2,7 +2,7 @@ const mongoose = require("mongoose");
 const dotenv = require("dotenv").config();
 const uniqueValidator = require("mongoose-unique-validator");
 
-const url = process.env.MONGODB_URI;
+const url = 'mongodb+srv://cpjim:Maristas56.@cluster0.kaxey.mongodb.net/phonebook?retryWrites=true&w=majority';
 
 
 mongoose
