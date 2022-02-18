@@ -52,6 +52,7 @@ const App = () => {
         })
         .catch((error) => {
           console.log("update fail");
+          showMessage(error.response.data.error, true);
         });
     }
 
@@ -66,6 +67,7 @@ const App = () => {
         })
         .catch((error) => {
           console.log("create fail");
+          showMessage(error.response.data.error, (error = true));
         });
     }
 
@@ -92,10 +94,7 @@ const App = () => {
         })
         .catch((error) => {
           console.log("remove fail");
-          showMessage(
-            `Error while trying to remove ${removeElement.name}`,
-            (error = true)
-          );
+          showMessage(error.response.data.error, (error = true));
         });
     }
   };
