@@ -20,4 +20,5 @@ const remove = (id) => {
   return axios.delete(`${baseUrl}/${id}`).then((response) => response.data);
 };
 
+// eslint-disable-next-line import/no-anonymous-default-export
 export default { getAll, create, update, remove };

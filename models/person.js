@@ -1,9 +1,9 @@
 const mongoose = require("mongoose");
-const dotenv = require("dotenv").config();
+const dotenv = require("dotenv").config({path: '.env'});
 const uniqueValidator = require("mongoose-unique-validator");
 
 const url = process.env.MONGODB_URI;
-console.log(url)
+
 
 mongoose
   .connect(url)
